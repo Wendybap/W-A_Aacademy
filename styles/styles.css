@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+/*---------------Estilos header---------------*/
+.header {
+  height: 60px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.logo,
+.icon-menu {
+  margin: 5px;
+  color: rgb(255, 255, 255);
+}
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 38px;
+  background-color: #fba919;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.container {
+  margin: auto;
+  width: 97%;
+}
+/*  --------------Estilos del menu--------------*/
+.nav {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu--link {
+  display: block;
+  padding: 15px;
+  background: #fba919;
+  text-decoration: none;
+  color: #fff;
+}
+.menu--link:hover,
+.select {
+  background: white;
+  color: #fba919;
+}
+
+/*  ------------Estilos menu hamburguesa------------*/
+/* show--nav = mostrar menu */
+.showNav {
+  left: 0;
+}
+/* -------------Estilos del Banner Imagen y contenedor------------- */
+.banner {
+  margin-top: -60px;
+  position: relative;
+  z-index: -1000;
+  margin-bottom: 20px;
+}
+
+.banner .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+.banner--texto {
+  display: none;
+}
+
+/* ------------------Estilos de la sección de main (Información)------------------ */
+.info--column {
+  color: #fff;
+  background-color: #fba919;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.info--title {
+  margin: 15px 0;
+}
+
+/* ------------------Estilos de la sección de main (Cursos)------------------ */
+.secction--title {
+  text-align: center;
+  font-size: 40px;
+  color: #fba919;
+  padding-bottom: 20px;
+}
+.courses--column {
+  position: relative;
+  margin-bottom: 30px;
+}
+.courses--description {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 60%;
+  height: 100%;
+  padding: 5px;
+}
+.courses--title {
+  font-size: 30px;
+}
+
+/* ------------------Estilos de la sección Footer------------------ */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.footer .socialNetworks [class^="icon"] {
+  display: inline-block;
+  font-size: 30px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+}
+
+/* ------------------Estilos responsive------------------ */
+
+@media (min-width: 480px) {
+  .logo {
+    font-size: 40px;
+  }
+  .banner--title {
+    font-size: 30px;
+    margin: 5px 0;
+  }
+  .banner--texto {
+    display: block;
+    font-size: 18px;
+    margin: 7px 0;
+  }
+  /* --------Secction Main Content----------------- */
+  .information {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -80px;
+  }
+  .info--column {
+    width: 32%;
+  }
+  .info--title {
+    font-size: 30px;
+  }
+  /* ----------Section Our Courses---------------------------------- */
+  .courses {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .secction--title {
+    width: 100%;
+  }
+  .courses--column {
+    width: 49%;
+  }
+  .footer .socialNetworks [class^="icon"] {
+    margin: 0 10px;
+  }
+}
+/* ----------------------------------------------------------- */
+@media (min-width: 768px) {
+  .banner--title {
+    font-size: 45px;
+  }
+  .information {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -99px;
+  }
+  .info--title {
+    font-size: 40px;
+  }
+  .info--text {
+    font-size: 20px;
+  }
+  .courses--title {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .courses--text {
+    font-size: 20px;
+  }
+  /* ------------------------------------------------------------------------- */
+
+  @media (min-width: 1024px) {
+    .container {
+      width: 1000px;
+    }
+    .nav {
+      position: static;
+      width: auto;
+    }
+    .menu {
+      display: flex;
+    }
+    .icon-menu {
+      display: none;
+    }
+    .menu--link {
+      background: none;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.9);
+    }
+    .select {
+      color: #fff;
+      background: #fba919;
+    }
+    .banner--title {
+      font-size: 50px;
+    }
+    .information {
+      margin-top: -120px;
+    }
+    .info--column {
+      padding: 30px;
+    }
+    .info--title {
+      text-align: center;
+    }
+    .courses--title {
+      font-size: 50px;
+    }
+    .secction--title {
+      margin: 30px 0;
+    }
+  }
+  /* ------------------------------- */
+  @media (min-width: 1280px) {
+    .container {
+      width: 1200px;
+    }
+    .logo {
+      font-size: 50px;
+    }
+
+    .banner .container {
+      top: 40%;
+    }
+    .information {
+      margin-top: -200px;
+    }
+  }
+}
